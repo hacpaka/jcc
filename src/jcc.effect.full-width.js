@@ -5,8 +5,9 @@
 			var width = jThis.parent().innerWidth();
 
 			if (jThis.is('[data-width-dec]')) {
+
 				jThis.attr('data-width-dec').split(/ +/).forEach(function(item) {
-					width -= /^[0-9]+$/.test(item) ? parseInt(jThis.attr('data-width-dec'))
+					width -= /^[0-9]+$/.test(item) ? parseInt(item)
 						: $('#' + item).outerWidth();
 				});
 			}

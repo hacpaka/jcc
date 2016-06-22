@@ -5,8 +5,9 @@
 			var height = jThis.parent().innerHeight();
 
 			if (jThis.is('[data-height-dec]')) {
+
 				jThis.attr('data-height-dec').split(/ +/).forEach(function(item){
-					height -= /^[0-9]+$/.test(item) ? parseInt(jThis.attr('data-height-dec'))
+					height -= /^[0-9]+$/.test(item) ? parseInt(item)
 						: $('#' + item).outerHeight();
 				});
 			}
@@ -15,4 +16,3 @@
 		});
 	})
 })(jQuery);
-
